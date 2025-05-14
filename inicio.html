@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Movimiento Física Mecánica 3MI</title>
+  <style>
+    body {
+      margin: 0;
+      height: 100vh;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      background: linear-gradient(to bottom right, #cff59b, #102903);
+      overflow: hidden;
+    }
+    h1 {
+      font-family: Arial, sans-serif;
+      color: #fff;
+      font-size: 3em;
+      animation: pendulum 2s ease-in-out;
+      transform-origin: top center;
+    }
+    p.integrantes {
+      font-family: Arial, sans-serif;
+      color: #f0f8ff;
+      margin-bottom: 2em;
+      animation: fadeIn 2s ease-out;
+    }
+    .buttons {
+      display: flex;
+      gap: 1em;
+    }
+    .buttons a {
+      text-decoration: none;
+    }
+    button {
+      padding: 1em 2em;
+      font-family: Arial, sans-serif;
+      font-size: 1em;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+      background-color: rgba(255, 255, 255, 0.8);
+      transition: background-color 0.3s;
+      animation: bounceIn 1s ease-out;
+    }
+    button:hover {
+      background-color: rgba(255, 255, 255, 1);
+    }
+    @keyframes pendulum {
+      0% { transform: rotate(15deg); }
+      50% { transform: rotate(-15deg); }
+      100% { transform: rotate(0deg); }
+    }
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(20px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+    @keyframes bounceIn {
+      0% { opacity: 0; transform: scale(0.5); }
+      60% { opacity: 1; transform: scale(1.2); }
+      100% { transform: scale(1); }
+    }
+  </style>
+</head>
+<body>
+  <h1>Movimiento Física Mecánica 3MI</h1>
+  <p class="integrantes">Integrantes: Jose Ignacio Echenique - Facundo Torres - Rodrigo Occelli</p>
+  <div class="buttons">
+    <a href="uniforme.html"><button>Movimiento Uniforme</button></a>
+    <a href="uvariado.html"><button>Movimiento Uniformemente Variado</button></a>
+    <a href="variado.html"><button>Movimiento Variado</button></a>
+  </div>
+</body>
+</html>
